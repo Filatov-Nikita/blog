@@ -13,8 +13,11 @@
 
 Route::get('/', 'MainController@index');
 
-Route::get('/test', 'MainController@get');
-Route::get('/test1', 'MainController@get');
+
+
+Route::get('/articles', 'MainController@get');
+
+
 
 
 
