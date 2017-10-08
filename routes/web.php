@@ -14,3 +14,7 @@
 Route::get('/', 'MainController@index');
 
 Route::get('/test', 'MainController@get');
+Route::get('/test1', 'MainController@get');
+
+
+
