@@ -17,3 +17,12 @@ Route::group(['prefix' => '/admin'], function() {
             ->where('id', '[0-9]+')
             ->name('admin.delete');
 });
+
+Route::group(['prefix' => '/admin/users'], function() {
+    Route::get('/', 'AdminUsersController@all')
+            ->name('admin.users.all');
+    Route::get('/login/', 'AdminUsersController@login')
+            ->name('admin.users.register');
+    Route::get('/register/', 'AdminUsersController@register')
+            ->name('admin.register');
+});
