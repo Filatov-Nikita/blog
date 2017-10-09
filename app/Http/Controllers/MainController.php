@@ -11,7 +11,7 @@ class MainController extends Controller {
     }
 
     public function get(Request $request) {
-        $name = $request->input('name', 'Стандарт');        
+        $name = $request->input('name', 'Стандарт');
         return $name;
     }
 
