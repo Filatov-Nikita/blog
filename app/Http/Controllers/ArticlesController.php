@@ -27,8 +27,8 @@ class ArticlesController extends Controller {
     public function rout_date() {
         $this->counter->count();
         $this->counter->count();
-        return $this->counter->get_value();
-
+       // return $this->counter->get_value();
+return view('pages.main', ['title' => '404']);
         //return Mydate(time());
     }
 
