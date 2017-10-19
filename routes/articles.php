@@ -11,4 +11,8 @@
         Route::get('/one/{id}', 'ArticlesController@one')
                 ->where('id', '[0-9]+')
                 ->name('articles.one');
+           Route::get('/date', 'ArticlesController@rout_date')
+                ->name('articles.date');
+            Route::get('/inter', 'ArticlesController@inter')
+                ->name('articles.inter');
     });
