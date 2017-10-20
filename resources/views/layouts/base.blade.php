@@ -70,7 +70,7 @@
                         <hr> 
                         @section('content')
                         @yield('content', 'I`m content!')
-                        @endsection
+                        @show
                         <hr>
                     </main>
                 </div>

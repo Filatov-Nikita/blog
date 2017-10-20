@@ -11,7 +11,7 @@ class AdminUsersController extends Controller
         return "login";
     }
     public function register() {
-        return "register";
+        return view('pages.register', ['title' => 'Регистрация']);
     }
      public function all() {
         return "all";
