@@ -59,8 +59,14 @@ class AdminUsersController extends Controller {
                     'email' => $request->input('email'),
                     'password' => $request->input('password'),
                         ], $remember);
-        dump($authResult);
-        
+        if ($authResult) {
+            return redirect()
+                            ->route('Main');
+        } else {
+            return redirect()
+                            ->route('admin.login')
+                            ->with('authError', 'Неправильный логин или пароль!');
+        }
     }
 
 }
