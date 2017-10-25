@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'MainController@index');
+Route::get('/', 'MainController@index')->name('Main');
 
 
 
@@ -21,3 +21,18 @@ Route::get('/articles', 'MainController@get');
 
 
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

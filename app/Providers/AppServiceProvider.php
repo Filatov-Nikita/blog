@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Http\Controllers\ArticlesController;
-
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider {
 
@@ -14,6 +14,7 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
+        Schema::defaultStringLength(191);
         require_once (app_path() . '/Includes/helpers.php');
     }
 

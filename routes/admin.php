@@ -16,6 +16,7 @@ Route::group(['prefix' => '/admin'], function() {
     Route::get('/delete/{id}', 'AdminController@delete')
             ->where('id', '[0-9]+')
             ->name('admin.delete');
+    
 });
 
 Route::group(['prefix' => '/admin/users'], function() {
@@ -23,6 +24,15 @@ Route::group(['prefix' => '/admin/users'], function() {
             ->name('admin.users.all');
     Route::get('/login/', 'AdminUsersController@login')
             ->name('admin.users.register');
+    
     Route::get('/register/', 'AdminUsersController@register')
             ->name('admin.register');
+     Route::post('/register/', 'AdminUsersController@registerPost')
+            ->name('admin.registerPost');
+     
+Route::get('/db/', 'AdminUsersController@db');
+Route::get('/login/', 'AdminUsersController@login')
+            ->name('admin.login');
+Route::post('/login/', 'AdminUsersController@loginPost')
+            ->name('admin.loginPost');
 });
